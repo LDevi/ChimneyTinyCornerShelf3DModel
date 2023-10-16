@@ -5,11 +5,11 @@ largeur_suppl_etage_2 = 14;
 largeur_deuxieme_etage = largeur + largeur_suppl_etage_2;
 epaisseur = 10;
 epaisseur_fond = 2;
-epaisseur_rebord = 15;
+epaisseur_rebord = 5;
 hauteur_etage = 140;
-diametre_pied = 7;
+diametre_pied = 4;
 rayon_pied = diametre_pied/2;
-hauteur_pied = 10; // Hauteur des pieds
+hauteur_pied = hauteur_etage * 2 + 2; // Hauteur des pieds
 
 angle_inclinaison_pieds = 5; // Angle d'inclinaison des pieds
 
@@ -28,7 +28,7 @@ module pied_incline() {
 }
 
 module pied() {
-    cylinder(h = hauteur_etage *2 + 10, d = diametre_pied);
+    cylinder(h = hauteur_pied, d = diametre_pied);
 }
 
 // Création de l'étagère principale
